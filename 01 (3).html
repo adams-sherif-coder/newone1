@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #circle {
+            width: 24px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: solid #333 1px;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .black {
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+    <img src="" alt="" id="photo">
+
+    <span onclick="test()">TEST</span>
+
+    <select onmouseenter="text_changed(event)" onchange="text_changed(event)" onclick="text_changed(event)">
+        <option value="Lorem">Lorem</option>
+        <option value="Pariatur">Pariatur</option>
+        <option value="Explicabo">Explicabo</option>
+        <option value="Magni">Magni</option>
+        <option value="Explicabo">Explicabo</option>
+    </select>
+
+
+    <button onclick="btn_clicked(event)">Click Me</button>
+
+
+    <div id="circle"></div>
+
+    <script>
+
+
+        function btn_clicked(e) {
+            console.log(e);
+            return
+            console.log(e.altKey);
+            console.log(e.shiftKey);
+
+            if (e.altKey === true) {
+                circle.className = 'red';
+            }
+
+            if (e.ctrlKey === true) {
+                circle.className = 'green';
+            }
+
+            if (e.ctrlKey === false && e.altKey === false) {
+                circle.className = 'black'
+            }
+
+        }
+
+
+        function text_changed(x) {
+
+            console.log(x)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

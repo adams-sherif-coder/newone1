@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #circle {
+            width: 140px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: solid #333 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div id="ch">
+
+    <button onclick="change_face (happy);">Happy</button>
+    <button onclick="change_face (Angry);">Angry</button>
+    <button onclick="change_face (sad);">Sad</button>
+    <button onclick="change_face (love);">Love</button>
+    </div>
+    
+
+    <div id="circle"></div>
+
+
+    <script>
+
+        // do not create any other functions
+
+        function  change_face (){
+            const changed_face = button.innerText;
+            circle.src =`js task 6/${changed_face}.png`;
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
